@@ -13,6 +13,12 @@
         android:layout_height="wrap_content"
         android:text="TextView" />
 
+    <TextView
+        android:id="@+id/lon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
     <Button
         android:id="@+id/qr"
         android:layout_width="match_parent"
@@ -20,8 +26,15 @@
         android:text="Display my QR" />
 
     <Button
+        android:id="@+id/parkme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parking Assist" />
+
+    <Button
         android:id="@+id/signout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign out" />
+
 </LinearLayout>

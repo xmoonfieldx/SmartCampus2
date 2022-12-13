@@ -46,20 +46,10 @@ public class MainActivity extends AppCompatActivity {
         signup = findViewById(R.id.signup);
         forgot = findViewById(R.id.forgot);
         phone = findViewById(R.id.phone);
-        x="7218081467";
+        //x = phones.getText().toString();
+        //x="7218081467";
         //k.setText(y);
-        //Accessing the firebase database
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                mail = (String) snapshot.child(x).getValue();
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
 
         phone.setOnClickListener(new View.OnClickListener() {
             @Override
