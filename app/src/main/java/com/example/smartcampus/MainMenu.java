@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainMenu extends AppCompatActivity {
 
-    Button signOut, qr, park;
+    Button signOut, qr, park, reward;
     TextView textView, tv2;
     String name, k, l, m;
     Double lat1, lon1, lat, lon, lat2, lon2, dist=99.000000, d, late, lane;
@@ -36,6 +36,7 @@ public class MainMenu extends AppCompatActivity {
         signOut = findViewById(R.id.signout);
         qr = findViewById(R.id.qr);
         park = findViewById(R.id.parkme);
+        reward = findViewById(R.id.reward);
         textView = findViewById(R.id.tv);
         tv2 = findViewById(R.id.lon);
 
@@ -68,8 +69,9 @@ public class MainMenu extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         lat1 = 13.1369289;
                         lon1 = 77.5963159;
+                        int n = (int) snapshot.getChildrenCount();
                         //Compute one with the lowest distance
-                        for(int i=1; i<3; i++)
+                        for(int i=1; i<=n; i++)
                         {
                             k=String.valueOf(i);
                             l = (String) snapshot.child(k).child("lat").getValue();
@@ -103,14 +105,11 @@ public class MainMenu extends AppCompatActivity {
                         }
                         textView.setText(String.valueOf(dist));
                         tv2.setText(String.valueOf(lat));
-                        Uri gmmIntentUri = Uri.parse("google.navigation:q=lat,88.435534");
+                        Uri gmmIntentUri = Uri.parse("google.navigation:q="+lat+","+lon);
                         //String gmmIntentUri = "https://www.google.com/maps/dir/?api=1&destination=" + lat + "," + lon + "&travelmode=driving";
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                         mapIntent.setPackage("com.google.android.apps.maps");
                         startActivity(mapIntent);
-
-
-
                     }
 
                     @Override
@@ -120,6 +119,15 @@ public class MainMenu extends AppCompatActivity {
                 });
 
 
+            }
+        });
+
+        reward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainMenu.this, leaderboard.class);
+                startActivity(i);
+                finish();
             }
         });
         signOut.setOnClickListener(new View.OnClickListener() {

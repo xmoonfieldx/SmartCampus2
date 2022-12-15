@@ -32,6 +32,12 @@
         android:text="Parking Assist" />
 
     <Button
+        android:id="@+id/reward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="rewards leaderboard" />
+
+    <Button
         android:id="@+id/signout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
