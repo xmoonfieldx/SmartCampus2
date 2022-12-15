@@ -29,7 +29,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Leader
     @NonNull
     @Override
     public LeaderHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_design,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item,parent,false);
         return new LeaderHolder(view);
     }
 
@@ -44,7 +44,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Leader
 
     @Override
     public int getItemCount() {
-        return 2;
+        return no.size();
         //return no.size();
     }
 
