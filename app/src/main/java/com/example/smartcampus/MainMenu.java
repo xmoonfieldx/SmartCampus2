@@ -37,8 +37,8 @@ public class MainMenu extends AppCompatActivity {
         qr = findViewById(R.id.qr);
         park = findViewById(R.id.parkme);
         reward = findViewById(R.id.reward);
-        textView = findViewById(R.id.tv);
-        tv2 = findViewById(R.id.lon);
+        /*textView = findViewById(R.id.tv);
+        tv2 = findViewById(R.id.lon);*/
 
         Intent r = getIntent();
         String mail = r.getStringExtra("key_mail");
@@ -69,7 +69,8 @@ public class MainMenu extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         lat1 = 13.1369289;
                         lon1 = 77.5963159;
-                        int n = (int) snapshot.getChildrenCount();
+                        int n = 2;
+                        //int n = (int) snapshot.getChildrenCount();
                         //Compute one with the lowest distance
                         for(int i=1; i<=n; i++)
                         {
@@ -103,8 +104,10 @@ public class MainMenu extends AppCompatActivity {
                             }
 
                         }
-                        textView.setText(String.valueOf(dist));
-                        tv2.setText(String.valueOf(lat));
+                        //lat=13.1369289;
+                        //lon=77.5963159;
+                        //textView.setText(String.valueOf(dist));
+                        //tv2.setText(String.valueOf(lat));
                         Uri gmmIntentUri = Uri.parse("google.navigation:q="+lat+","+lon);
                         //String gmmIntentUri = "https://www.google.com/maps/dir/?api=1&destination=" + lat + "," + lon + "&travelmode=driving";
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);

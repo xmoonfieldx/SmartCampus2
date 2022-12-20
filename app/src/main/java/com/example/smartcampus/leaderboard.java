@@ -16,6 +16,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class leaderboard extends AppCompatActivity {
@@ -23,13 +25,13 @@ public class leaderboard extends AppCompatActivity {
     RecyclerView recyclerView;
     DatabaseReference database;
     MyAdapter myAdapter;
+    TextView tv;
     ArrayList<User> list;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
-
         recyclerView = findViewById(R.id.re);
         database = FirebaseDatabase.getInstance().getReference().child("reward");
         recyclerView.setHasFixedSize(true);

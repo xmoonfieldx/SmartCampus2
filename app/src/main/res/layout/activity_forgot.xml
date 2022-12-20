@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:background="#d4f0f0"
     android:foregroundGravity="center"
     android:gravity="center"
     android:orientation="vertical"
@@ -22,5 +23,7 @@
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset password" />
+        android:backgroundTint="#1b7895"
+        android:text="Reset password"
+        android:textColor="#d4f0f0" />
 </LinearLayout>

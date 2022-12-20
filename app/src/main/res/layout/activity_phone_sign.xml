@@ -7,34 +7,56 @@
     android:foregroundGravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".PhoneSign">
+    tools:context=".PhoneSign"
+    android:background="#d4f0f0">
 
     <EditText
         android:id="@+id/contact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="20dp"
         android:ems="10"
         android:hint="Enter contact"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="#1b7895"
+        android:textColorHint="#97c1a9"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/otp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="send otp" />
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#1b7895"
+        android:text="send otp"
+        android:textColor="#d4f0f0"
+        android:textColorHint="#97c1a9"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/enterotp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
         android:ems="10"
-        android:hint="enter otp"
+        android:hint="Enter otp"
         android:inputType="number"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textColor="#1b7895"
+        android:textColorHint="#97c1a9"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/verify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="verify" />
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#1b7895"
+        android:text="verify"
+        android:textColor="#d4f0f0"
+        android:textSize="20sp" />
 </LinearLayout>

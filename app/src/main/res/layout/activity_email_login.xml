@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d4f0f0"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/usn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter email"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#1b7895"
+        android:textColorHint="#97c1a9"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/phones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter contact"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#1b7895"
+        android:textColorHint="#97c1a9"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/pswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="#1b7895"
+        android:textColorHint="#97c1a9"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="#1b7895"
+        android:shadowColor="#4C3F46"
+        android:text="Sign In"
+        android:textColor="#d4f0f0"
+        android:textSize="20sp"
+        app:rippleColor="#97c1a9"
+        app:strokeColor="#4C3F46" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="#1b7895"
+        android:text="sign up"
+        android:textColor="#d4f0f0"
+        android:textSize="20sp"
+        app:rippleColor="#97c1a9" />
+
+    <Button
+        android:id="@+id/forgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="#8fcaca"
+        android:text="Forgot Password?"
+        android:textColor="#1b7895"
+        android:textSize="20sp"
+        app:rippleColor="#97c1a9" />
+
+</LinearLayout>

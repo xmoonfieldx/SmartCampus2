@@ -4,43 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#d4f0f0"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainMenu">
 
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/lon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:gravity="center_horizontal"
+        android:text="What would you like to do today?"
+        android:textColor="#1b7895"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/qr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Display my QR" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#1b7895"
+        android:text="Display my QR"
+        android:textColor="#d4f0f0"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/parkme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Parking Assist" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#1b7895"
+        android:text="Parking Assist"
+        android:textColor="#d4f0f0"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/reward"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="rewards leaderboard" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#1b7895"
+        android:text="rewards leaderboard"
+        android:textColor="#d4f0f0"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/signout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign out" />
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#8fcaca"
+        android:text="Sign out"
+        android:textColor="#1b7895"
+        android:textSize="16sp" />
 
 </LinearLayout>
