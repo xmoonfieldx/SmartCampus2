@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f2f7ff"
     android:foregroundGravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".PhoneSign"
-    android:background="#d4f0f0">
+    tools:context=".PhoneSign">
 
     <EditText
         android:id="@+id/contact"
@@ -20,8 +20,8 @@
         android:ems="10"
         android:hint="Enter contact"
         android:inputType="textPersonName"
-        android:textColor="#1b7895"
-        android:textColorHint="#97c1a9"
+        android:textColor="#333333"
+        android:textColorHint="#2c3e50"
         android:textSize="24sp" />
 
     <Button
@@ -29,9 +29,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#1b7895"
+        android:backgroundTint="#333333"
         android:text="send otp"
-        android:textColor="#d4f0f0"
+        android:textColor="#f2f7ff"
         android:textColorHint="#97c1a9"
         android:textSize="20sp" />
 
@@ -46,8 +46,8 @@
         android:hint="Enter otp"
         android:inputType="number"
         android:minHeight="48dp"
-        android:textColor="#1b7895"
-        android:textColorHint="#97c1a9"
+        android:textColor="#333333"
+        android:textColorHint="#2c3e50"
         android:textSize="24sp" />
 
     <Button
@@ -55,8 +55,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#1b7895"
+        android:backgroundTint="#f39c12"
         android:text="verify"
-        android:textColor="#d4f0f0"
+        android:textColor="#333333"
         android:textSize="20sp" />
 </LinearLayout>

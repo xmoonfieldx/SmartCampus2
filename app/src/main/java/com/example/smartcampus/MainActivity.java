@@ -1,12 +1,14 @@
 package com.example.smartcampus;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,16 +29,20 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
-    ImageButton phone, mail;
+    ImageButton phone, mail, signup;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        ActionBar actionBar = getSupportActionBar();
+        Drawable background = getResources().getDrawable(R.color.my_actionbar_color);
+        actionBar.setBackgroundDrawable(background);
         phone = findViewById(R.id.imageButton3);
         mail = findViewById(R.id.imageButton4);
+        signup = findViewById(R.id.imageView2);
 
         phone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, SignUp.class);
+                startActivity(i);
+            }
+        });
     }
 }

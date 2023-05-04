@@ -1,10 +1,12 @@
 package com.example.smartcampus;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.net.CookieHandler;
+import java.net.CookieManager;
+import java.net.HttpCookie;
+import java.util.List;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -32,7 +39,9 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
+        ActionBar actionBar = getSupportActionBar();
+        Drawable background = getResources().getDrawable(R.color.my_actionbar_color);
+        actionBar.setBackgroundDrawable(background);
         signOut = findViewById(R.id.signout);
         qr = findViewById(R.id.qr);
         park = findViewById(R.id.parkme);
@@ -42,6 +51,14 @@ public class MainMenu extends AppCompatActivity {
 
         Intent r = getIntent();
         String mail = r.getStringExtra("key_mail");
+        // Create a cookie manager
+        CookieManager cookieManager = new CookieManager();
+        CookieHandler.setDefault(cookieManager);
+
+// Set the value of the cookie
+        HttpCookie cookie = new HttpCookie("val", mail);
+        cookieManager.getCookieStore().add(null, cookie);
+
         //String n = r.getStringExtra("yes");
         try{
             //String mails = mail.replace("//.",",");

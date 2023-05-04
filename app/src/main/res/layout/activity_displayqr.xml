@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d4f0f0"
+    android:background="#f2f7ff"
     tools:context=".MainActivity">
 
     <!--We are using this image
@@ -31,9 +31,9 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="40dp"
-        android:backgroundTint="#1b7895"
+        android:backgroundTint="#2c3e50"
         android:text="close"
-        android:textColor="#d4f0f0"
+        android:textColor="#f2f7ff"
         android:textSize="24sp" />
 
 </RelativeLayout>

@@ -1,9 +1,13 @@
 package com.example.smartcampus;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +34,7 @@ public class PhoneSign extends AppCompatActivity {
     EditText contact, enterotp;
     Button otp, verify;
     String mail;
+    SharedPreferences sharedPref;
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -39,7 +44,9 @@ public class PhoneSign extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_sign);
-
+        ActionBar actionBar = getSupportActionBar();
+        Drawable background = getResources().getDrawable(R.color.my_actionbar_color);
+        actionBar.setBackgroundDrawable(background);
         contact = findViewById(R.id.contact);
         enterotp = findViewById(R.id.enterotp);
         otp = findViewById(R.id.otp);
@@ -67,7 +74,10 @@ public class PhoneSign extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         mail = (String) snapshot.child(y).getValue();
-
+                        sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.putString("mail", mail);
+                        editor.apply();
                     }
 
                     @Override

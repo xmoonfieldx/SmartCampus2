@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d4f0f0"
+    android:background="#f2f7ff"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainMenu">
@@ -15,56 +15,70 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="What would you like to do today?"
-        android:textColor="#1b7895"
+        android:textColor="#333333"
         android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/qr"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#1b7895"
-        android:text="Display my QR"
-        android:textColor="#d4f0f0"
-        android:textSize="20sp" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/parkme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#1b7895"
-        android:text="Parking Assist"
-        android:textColor="#d4f0f0"
-        android:textSize="20sp" />
+        <Button
+            android:id="@+id/qr"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#d4efdf"
+            android:text="Display my QR"
+            android:textColor="#105a3e"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/reward"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#1b7895"
-        android:text="rewards leaderboard"
-        android:textColor="#d4f0f0"
-        android:textSize="20sp" />
+        <Button
+            android:id="@+id/parkme"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#d4efdf"
+            android:text="Parking Assist"
+            android:textColor="#105a3e"
+            android:textSize="20sp" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/signout"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#8fcaca"
-        android:text="Sign out"
-        android:textColor="#1b7895"
-        android:textSize="16sp" />
+        android:layout_marginLeft="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reward"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#d4efdf"
+            android:text="rewards"
+            android:textColor="#105a3e"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/signout"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#d4efdf"
+            android:text="Sign out"
+            android:textColor="#105a3e"
+            android:textSize="20sp" />
+    </LinearLayout>
 
 </LinearLayout>

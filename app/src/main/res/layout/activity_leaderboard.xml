@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d4f0f0"
-    tools:context=".leaderboard"
-    android:orientation="vertical">
+    android:background="#f2f7ff"
+    android:orientation="vertical"
+    tools:context=".leaderboard">
 
     <TextView
         android:id="@+id/textView3"
@@ -15,7 +15,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
         android:text="Leaderboard"
-        android:textColor="#1b7895"
+        android:textColor="#333333"
         android:textSize="24sp" />
 
     <LinearLayout

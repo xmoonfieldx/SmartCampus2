@@ -1,12 +1,14 @@
 package com.example.smartcampus;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,7 +32,7 @@ public class emailLogin extends AppCompatActivity {
     EditText usn, pswd, phones;
     Button signin, signup, forgot, phone;
     String mail, x, y, gf;
-
+    SharedPreferences sharedPref;
     FirebaseAuth auth = FirebaseAuth.getInstance();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference reference = database.getReference();
@@ -39,11 +41,13 @@ public class emailLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email_login);
+        ActionBar actionBar = getSupportActionBar();
+        Drawable background = getResources().getDrawable(R.color.my_actionbar_color);
+        actionBar.setBackgroundDrawable(background);
         usn = findViewById(R.id.usn);
         pswd = findViewById(R.id.pswd);
         phones = findViewById(R.id.phones);
         signin = findViewById(R.id.signin);
-        signup = findViewById(R.id.signup);
         forgot = findViewById(R.id.forgot);
         //x = phones.getText().toString();
         //x="7218081467";
@@ -73,6 +77,11 @@ public class emailLogin extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         mail = (String) snapshot.child("ID1").child(y).getValue();
+                        sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.putString("mail", mail);
+                        editor.apply();
+
 
                     }
 
@@ -86,13 +95,6 @@ public class emailLogin extends AppCompatActivity {
                 signInFirebase(userMail,userPassword);
 
 
-            }
-        });
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(emailLogin.this, SignUp.class);
-                startActivity(i);
             }
         });
     }

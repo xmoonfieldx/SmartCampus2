@@ -2,11 +2,13 @@ package com.example.smartcampus;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -32,6 +34,9 @@ public class leaderboard extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
+        ActionBar actionBar = getSupportActionBar();
+        Drawable background = getResources().getDrawable(R.color.my_actionbar_color);
+        actionBar.setBackgroundDrawable(background);
         recyclerView = findViewById(R.id.re);
         database = FirebaseDatabase.getInstance().getReference().child("reward");
         recyclerView.setHasFixedSize(true);

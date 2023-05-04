@@ -4,9 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F2F7FF"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="#d4f0f0">
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Streamline Your Campus Experience"
+        android:textColor="#333333"
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,47 +27,89 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="-20dp"
         android:foregroundGravity="center"
-        app:srcCompat="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
-        android:text="Log In using"
-        android:textColor="#1b7895"
-        android:textSize="20sp" />
+        app:srcCompat="@drawable/logos" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="0dp"
+        android:layout_marginRight="40dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageButton4"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:backgroundTint="#d4f0f0"
-            android:maxWidth="150dp"
-            android:maxHeight="150dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/mail" />
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:backgroundTint="#d4f0f0"
-            android:maxWidth="150dp"
-            android:maxHeight="150dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/contact" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Login"
+                android:textColor="#333333"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#f2f7ff"
+                android:maxWidth="130dp"
+                android:maxHeight="130dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/email" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#f2f7ff"
+                android:maxWidth="130dp"
+                android:maxHeight="130dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/contacts" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Signup"
+                android:textColor="#333333"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#f2f7ff"
+                android:maxWidth="130dp"
+                android:maxHeight="130dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/signup" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
+
